@@ -1,0 +1,1 @@
+<?php require_once('newwelcome.php'); #header("Location: newwelcome.php"); ?>

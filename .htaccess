@@ -1,0 +1,16 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^login([a-z]+)?$   login.php [NC,L]
+RewriteRule ^signup([a-z]+)?$   signup.php [NC,L]
+RewriteRule ^reset([a-z]+)?$   reset_password.php [NC,L]
+RewriteRule ^login([a-z]+)?$   index.php [NC,L]
+RewriteRule ^home([a-z]+)?$   newwelcome.php [NC,L]
+RewriteRule ^welcome([a-z]+)?$   newwelcome.php [NC,L]
+
+RewriteRule ^signout/([a-z_-]+)$   controller.php?signout=$1 [NC,L]
+RewriteRule ^verifyreset/([a-z]+)/([a-zA-Z0-9=]+)/([a-zA-Z0-9]+)$   controller.php?processReset=$1&email=$2&token=$3 [NC,L]
+RewriteRule ^confirm/([a-z]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$		controller.php?confirm=$1&verification=$2&token=$3 [NC,L]
