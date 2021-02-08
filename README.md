@@ -8,7 +8,7 @@
 - MYSQL
 - HTML5
 - CSS3
-- JAVASCRIPT
+- JAVASCRIPT and AJAX
 
 
 ## `Screenshot`
